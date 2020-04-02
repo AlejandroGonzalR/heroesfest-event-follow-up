@@ -1,8 +1,8 @@
 version: "3"
 services:
   node:
-    container_name: "hermes-server"
-    build: .
+    container_name: "heroesfest-server"
+    build: ""
     depends_on:
       - postgres
     links:
