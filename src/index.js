@@ -3,6 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const config = require('./config');
+const routes = require('./routes/routes');
 
 // Constants
 const PORT = config.server.port;
@@ -25,6 +26,8 @@ app.use((req, res, next) => {
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
 });
+
+routes(app);
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
