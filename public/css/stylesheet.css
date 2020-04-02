@@ -1,0 +1,56 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #e7ebf0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    max-width: 1010px;
+    margin: 0 auto;
+    background-color: #fff;
+    font-family: "Arial", sans-serif;
+}
+
+header {
+    background-color: #5681a3;
+    display: flex;
+    flex-direction: row;
+    height: 58px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > h3 {
+    color: #fff;
+    margin: 0 10px;
+}
+
+#logs-area {
+    margin: 20px auto;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ecf1f8;
+    border-radius: 3px;
+    height: 780px;
+    text-overflow: clip;
+    overflow-y: scroll;
+}
+
+#logs-area > table thead {
+    min-width: 100%;
+}
+
+#logs-area > table tbody {
+    min-width: 100%;
+}
+
+#logs-area > table td {
+    padding: 20px;
+}
