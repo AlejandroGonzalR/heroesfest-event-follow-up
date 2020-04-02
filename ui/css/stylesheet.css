@@ -1,0 +1,139 @@
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-height: 100%;
+    width: 100%;
+    font-family: "Arial", "sans-serif";
+    background-color: #281846;
+    overflow: hidden;
+}
+
+#brand {
+    margin: 20px auto;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1010px;
+}
+
+#brand > span {
+    margin-left: 20px;
+    color: #fff;
+    font-size: 17px;
+}
+
+#queries-section {
+    background-color: #ffffff;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 400px;
+}
+
+#queries-section > h3 {
+    font-family: "URW Bookman L", sans-serif;
+    font-style: oblique;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+#queries-section > span {
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 600px;
+    margin: 40px auto;
+}
+
+select {
+    flex: 1;
+    padding: 0 0.3em;
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #e7ebf0;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 30px;
+    line-height: 3;
+    background: #e7ebf0;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: -0.5em;
+    right: 0;
+    padding: 0 0.5em;
+    background: #bdbdbd;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+.select:hover::after {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+    width: 160px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 9px 14px;
+    border-color: #38275b;
+    background: #fff;
+    color: #38275b;
+    border-radius: 5px;
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    transition: .5s all ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #38275b;
+    color: #fff;
+}
+
+.btn > span {
+    vertical-align: middle;
+    display: block;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 180px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
