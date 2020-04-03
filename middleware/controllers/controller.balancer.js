@@ -2,27 +2,27 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const { buildPathPdf } = require('../routes/buildPaths');
-const hermesUrl = 'http://10.4.72.150';
+const hermesUrl = 'http://0.0.0.0';
 
 const addresses = [
     {
         host: hermesUrl,
-        port: 8090
+        port: 10000
     },
     {
         host: hermesUrl,
-        port: 8091
+        port: 10001
     },
     {
         host: hermesUrl,
-        port: 8092
+        port: 10002
     }
 ];
 
 let errorsCounter = 0;
 
 exports.obtainInstitutions = (req, res) => {
-    console.log(`${addresses[errorsCounter].host}:${addresses[errorsCounter].port}/institutions`);
+    console.log('asdasd')
     notifyUnavailableService(res);
     getInstitutionsData()
         .then(response => {
@@ -42,7 +42,6 @@ async function getInstitutionsData() {
 }
 
 exports.getEventReport = (req, res) => {
-    console.log(`${addresses[errorsCounter].host}:${addresses[errorsCounter].port}/attendees`);
     let institution = req.query.institution;
     if (!institution) {
         handleRequest(req);
@@ -94,7 +93,6 @@ function notifyUnavailableService(res) {
     if (errorsCounter === 2) {
         res.writeHead(503, { 'Content-Type': 'text/plain' });
         res.end('Service unavailable');
-        return;
     }
 }
 

@@ -7,7 +7,6 @@ const logSchema = Schema({
     path: String,
     status: String,
     message:String
-
 });
 
 module.exports = mongoose.model('Logs',logSchema);

@@ -4,6 +4,6 @@ module.exports = {
         host: '0.0.0.0'
     },
     database: {
-        host: 'mongodb://10.4.72.150:27017/lab2logDB'
+        host: 'mongodb://localhost:27017/logDB'
     }
 };

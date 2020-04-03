@@ -6,8 +6,7 @@ const config = require('./config');
 const routes = require('./routes/routes');
 
 // Constants
-const PORT = config.server.port;
-const HOST = config.server.host;
+const PORT = process.env.PORT | config.server.port;
 
 // App
 const app = express();
@@ -29,5 +28,5 @@ app.use((req, res, next) => {
 
 routes(app);
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+app.listen(PORT);
+console.log(`Running on http://localhost:${PORT}`);

@@ -2,23 +2,24 @@
 
 const nodeMailer = require('nodemailer');
 
+const GMAIL_USER = process.env.GMAIL_USER;
+const GMAIL_PASS = process.env.GMAIL_PASS;
+
 const transporter = nodeMailer.createTransport({
-    // host: 'smtp.gmail.com',
-    // port: 465,
-    // secure: true,
-    proxy: 'http://172.16.0.73:8080',
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
-        user: 'caronte.logs@gmail.com',
-        pass: 'c4r0nt3.'
+        user: GMAIL_USER,
+        pass: GMAIL_PASS
     }
 });
 
 exports.sendMail = (req, res) => {
     const mailOptions = {
-        from: 'caronte.logs@gmail.com',
-        to: 'caronte.logs@gmail.com',
-        subject: 'Caronte Server Error Log',
+        from: GMAIL_USER,
+        to: GMAIL_USER,
+        subject: 'Server Error Log',
         html: `<h3>Error Details</h3>
                <p>${req.body.message}</p>
                <p>${req.body.status}</p>
